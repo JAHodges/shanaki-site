@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  // Replace this with your actual deployment URL
-  site: 'https://shanakimartialarts.com',
-  // If you are deploying to a GitHub subpath (e.g. username.github.io/repo-name), 
-  // set 'base' to '/repo-name'
+  // site should be the final production URL
+  site: 'https://jahodges.github.io',
+  // base should be your repository name with a leading slash
+  base: '/shanaki-site',
 });
