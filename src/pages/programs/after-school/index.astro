@@ -1,0 +1,349 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="After School Program">
+  <section class="program-hero section-padding bg-dark text-center">
+    <div class="container animate">
+      <div class="badge">EST. 1991</div>
+      <h1>Kikkin' It <span>After School</span></h1>
+      <p class="hero-subtitle">Wythe County's Premier Academic & Character Development Program</p>
+      <div class="trust-bar">
+        <span>Licensed Educator Directed</span>
+        <span class="dot"></span>
+        <span>Coordinated Free Transport</span>
+        <span class="dot"></span>
+        <span>30+ Years Experience</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview section-padding">
+    <div class="container">
+      <div class="grid-2">
+        <div class="content-box animate">
+          <h2 class="section-label">Our Mission</h2>
+          <h3>What We Do</h3>
+          <p>The Shanaki After School program is more than just care; it's a comprehensive growth system. Directed by a licensed educator, we focus on bridging the gap between academic success and physical excellence.</p>
+          
+          <ul class="feature-list">
+            <li><strong>Scholastic Performance:</strong> Improving grades through structured study.</li>
+            <li><strong>Character Building:</strong> Teaching courtesy, respect, and integrity.</li>
+            <li><strong>Leadership Skills:</strong> Developing life skills and true confidence.</li>
+            <li><strong>Safety Awareness:</strong> Non-violent conflict resolution and awareness.</li>
+            <li><strong>Athleticism:</strong> Enhancing physical fitness and coordination.</li>
+          </ul>
+        </div>
+        <div class="feature-cards animate">
+          <div class="feat-card">
+            <div class="icon">✓</div>
+            <h4>Academic Program</h4>
+            <p>Exclusive martial arts curriculum designed for students.</p>
+          </div>
+          <div class="feat-card">
+            <div class="icon">✓</div>
+            <h4>Expert Staff</h4>
+            <p>Master Level Black Belt Instructors and Licensed Educators.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="daily-structure section-padding bg-light">
+    <div class="container">
+      <div class="section-header animate">
+        <h2>Typical Afternoon Schedule</h2>
+        <p>A balanced mix of academics, athletics, and character building.</p>
+        <p class="hours">Monday thru Friday | 3:00 PM to 6:00 PM</p>
+      </div>
+      
+      <div class="schedule-list animate">
+        <div class="schedule-item">
+          <div class="icon">🚌</div>
+          <div class="details">
+            <h3>Arrival & Transport</h3>
+            <p>Students are safely transported from school to the Shanaki Studio via public school bus or parent drop-off.</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="icon">🍎</div>
+          <div class="details">
+            <h3>Nutrition & Snack</h3>
+            <p>Each attending child is provided with a healthy snack upon arrival to refuel for the afternoon's activities.</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="icon">📝</div>
+          <div class="details">
+            <h3>Dedicated Homework Time</h3>
+            <p>Structured time for students to focus on their school assignments, ensuring academics remain a top priority.</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="icon">🥋</div>
+          <div class="details">
+            <h3>Martial Arts & Physical Activity</h3>
+            <p>An exciting 30-45 minute martial arts course or physical activity to promote overall health and increase athleticism.</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="icon">🛡️</div>
+          <div class="details">
+            <h3>Character Development</h3>
+            <p>A 30-45 minute lesson where students set personal goals, discuss values, and hone their "Code of the Warrior."</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="icon">🎨</div>
+          <div class="details">
+            <h3>Games & Enrichment</h3>
+            <p>The evening concludes with games, arts and crafts, or educational workshops in a fun, supportive environment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefit-selector section-padding">
+    <div class="container">
+      <div class="print-box animate">
+        <div class="print-header">
+          <div class="seal">SHANAKI</div>
+          <h2>Free Orientation Class</h2>
+          <p>Choose the benefits you would like to see your child receive (in order of importance):</p>
+        </div>
+        <div class="benefit-list">
+          <div class="benefit-item"><span>[ ]</span> Personal Discipline</div>
+          <div class="benefit-item"><span>[ ]</span> Self-defense and Safety</div>
+          <div class="benefit-item"><span>[ ]</span> Better Focus and Concentration</div>
+          <div class="benefit-item"><span>[ ]</span> Physical Fitness / Athleticism</div>
+          <div class="benefit-item"><span>[ ]</span> High Self-esteem</div>
+          <div class="benefit-item"><span>[ ]</span> Better Self-control</div>
+          <div class="benefit-item"><span>[ ]</span> Better Grades</div>
+          <div class="benefit-item"><span>[ ]</span> Leadership and Goal Setting</div>
+        </div>
+        <div class="print-footer">
+          <p class="red-text"><strong>Print this list and bring it with you to redeem your FREE orientation class.</strong></p>
+          <div class="contact-highlight">
+            <p>Call 276.228.6543 or email shanakimartialarts@gmail.com</p>
+            <p>to schedule your FREE, no-obligation interview.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  h1 span { color: var(--color-red); }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: var(--color-red);
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+  }
+
+  /* Overview & Grid */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .section-label {
+    color: var(--color-red);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  .feature-list li {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+  }
+
+  .feature-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-red);
+    font-weight: 700;
+  }
+
+  .feat-card {
+    background: var(--color-white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--color-red);
+  }
+
+  .feat-card .icon {
+    font-size: 1.5rem;
+    color: var(--color-red);
+    margin-bottom: 1rem;
+  }
+
+  /* Schedule List */
+  .hours {
+    font-weight: 700;
+    color: var(--color-red);
+    margin-top: 1rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .schedule-list {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .schedule-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border-left: 5px solid var(--color-red);
+  }
+
+  .schedule-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .schedule-item .icon { font-size: 2rem; }
+
+  .details h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+    font-size: 1.3rem;
+  }
+
+  .details p { color: #666; margin: 0; }
+
+  /* Print Box */
+  .print-box {
+    max-width: 750px;
+    margin: 0 auto;
+    border: 3px solid #eee;
+    padding: 4rem;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .seal {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: 2px solid var(--color-red);
+    color: var(--color-red);
+    padding: 0.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    opacity: 0.2;
+    transform: rotate(15deg);
+  }
+
+  .print-header h2 {
+    color: var(--color-red);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    text-align: left;
+  }
+
+  .benefit-item {
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+  .benefit-item span {
+    color: #ddd;
+    font-family: monospace;
+  }
+
+  .red-text { color: var(--color-red); }
+
+  .print-footer {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+  }
+
+  .contact-highlight {
+    margin-top: 2rem;
+    background: var(--color-gray-light);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+
+  .contact-highlight p {
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 992px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  @media (max-width: 768px) {
+    .schedule-item { flex-direction: column; gap: 1rem; text-align: center; }
+    .print-box { padding: 3rem 1.5rem; }
+    .benefit-list { grid-template-columns: 1fr; }
+    .seal { display: none; }
+  }
+</style>

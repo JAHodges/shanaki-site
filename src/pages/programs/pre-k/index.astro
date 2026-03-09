@@ -1,0 +1,285 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Kids Kikkin' It (Pre-K)">
+  <section class="program-hero section-padding bg-dark text-center">
+    <div class="container animate">
+      <div class="badge">EST. 1991</div>
+      <h1>Kids Kikkin' It <span>(Pre-K)</span></h1>
+      <p class="hero-subtitle">Wythe County's Only Licensed Facility with a Licensed VA Teacher</p>
+      <div class="trust-bar">
+        <span>Subsidy Approved</span>
+        <span class="dot"></span>
+        <span>40 Years Experience</span>
+        <span class="dot"></span>
+        <span>Fully Licensed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview section-padding">
+    <div class="container">
+      <div class="grid-2">
+        <div class="content-box animate">
+          <h2 class="section-label">Academic Excellence</h2>
+          <h3>Foundation for Life</h3>
+          <p>Led by a <strong>Licensed VA Teacher</strong> with over 20 years of experience, our program combines the renowned <strong>Frogstreet</strong> and <strong>Abeka</strong> curricula. We ensure every child is academically prepared while developing the essential character traits of a martial artist.</p>
+          
+          <ul class="feature-list">
+            <li><strong>Phonics-based Reading:</strong> Building early literacy.</li>
+            <li><strong>Manuscript & Numbers:</strong> Developing essential writing and math skills.</li>
+            <li><strong>Music & Arts:</strong> Fostering creativity and expression.</li>
+            <li><strong>Life Skills:</strong> Practical instruction for daily independence.</li>
+          </ul>
+        </div>
+        <div class="feature-cards animate">
+          <div class="feat-card">
+            <div class="icon">✓</div>
+            <h4>Safety First</h4>
+            <p>Adult, fully background-checked staff in a secure environment.</p>
+          </div>
+          <div class="feat-card">
+            <div class="icon">✓</div>
+            <h4>Special Education</h4>
+            <p>Lead instructor certified in Early Childhood & Special Education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="development section-padding bg-light">
+    <div class="container text-center animate">
+      <div class="section-header">
+        <h2>Developing the Whole Child</h2>
+        <p>Our curriculum addresses physical, mental, and social growth.</p>
+      </div>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <div class="outcome-icon">Focus</div>
+          <p>Improved Concentration</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-icon">Social</div>
+          <p>Positive Socialization</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-icon">Body</div>
+          <p>Improved Coordination</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-icon">Mind</div>
+          <p>Personal Discipline</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule-details section-padding">
+    <div class="container">
+      <div class="schedule-box animate">
+        <div class="box-header">
+          <h3>Program Details</h3>
+        </div>
+        <div class="box-content">
+          <div class="info-row">
+            <strong>Ages:</strong>
+            <span>3 - 4 Years Old</span>
+          </div>
+          <div class="info-row">
+            <strong>Regular Hours:</strong>
+            <span>Mon - Fri, 8:00 AM – 3:00 PM</span>
+          </div>
+          <div class="info-row">
+            <strong>Extended Hours:</strong>
+            <span>7:45 AM – 6:00 PM Available</span>
+          </div>
+          <div class="info-row">
+            <strong>Features:</strong>
+            <span>Weekly Martial Arts & Educational Workshops</span>
+          </div>
+        </div>
+        <div class="box-footer">
+          <a href="/contact" class="btn">Check Availability</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  h1 span { color: var(--color-red); }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--color-red);
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .section-label {
+    color: var(--color-red);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    margin-top: 2.5rem;
+  }
+
+  .feature-list li {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+  }
+
+  .feature-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-red);
+    font-weight: 700;
+  }
+
+  .feat-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--color-red);
+  }
+
+  .feat-card .icon {
+    font-size: 1.5rem;
+    color: var(--color-red);
+    margin-bottom: 1rem;
+  }
+
+  .feat-card h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .outcome-card {
+    background: var(--color-white);
+    padding: 3rem 1rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+
+  .outcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .outcome-icon {
+    color: var(--color-red);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .outcome-card p {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .schedule-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  .box-header {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--color-red);
+  }
+
+  .box-content {
+    padding: 3rem;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .info-row strong {
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    color: var(--color-red);
+  }
+
+  .box-footer {
+    padding: 2rem;
+    text-align: center;
+    background: #fdfdfd;
+  }
+
+  @media (max-width: 992px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  @media (max-width: 768px) {
+    .trust-bar { flex-direction: column; gap: 0.5rem; }
+    .dot { display: none; }
+    .content-box h3 { font-size: 2rem; }
+  }
+</style>

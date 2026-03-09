@@ -1,0 +1,176 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Philosophy & History">
+  <section class="philosophy-hero section-padding">
+    <div class="container text-center">
+      <h1>In Honor There Is Life</h1>
+      <p class="subtitle">The Shanaki Code of the Warrior</p>
+    </div>
+  </section>
+
+  <section class="honor-section section-padding">
+    <div class="container">
+      <div class="honor-content text-center">
+        <p class="honor-line">Honor, Respect, Duty, Courage, Love, Truth, Justice</p>
+        <p class="honor-line">For this is Bushido - The Code of the Warrior</p>
+        <p class="honor-line">I will Always Strive to Live My Life by This Code</p>
+        <p class="honor-line">With Constant Endeavor and Self-discipline</p>
+        <p class="honor-line">I will Develop my Character in a Positive Manner</p>
+        <p class="honor-line">I will Build True Confidence Through</p>
+        <p class="honor-line emphasized">Knowledge in the Mind, Honesty in the Heart, and Strength in the Body</p>
+        <p class="honor-line">I will Seek Peace and Never Fight Without Cause</p>
+        <p class="honor-line">I will Respect My Fellow Man and Defend the Weak</p>
+        <p class="honor-line">To Live When it is Right to Live</p>
+        <p class="honor-line">To Strike When it is Right to Strike</p>
+        <p class="honor-line">To Die When it is Right to Die</p>
+        <p class="honor-line">This is the Ultimate</p>
+        <p class="honor-line">By Training Mind, Body, and Spirit</p>
+        <p class="honor-line">I will Hone My Inner Power</p>
+        <p class="honor-line">I will Know Myself and Discover Meaning</p>
+        <h2 class="final-honor">IN HONOR THERE IS LIFE!</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="history section-padding bg-dark">
+    <div class="container">
+      <div class="history-content">
+        <h2>History of Shanaki</h2>
+        <p>Shanaki Martial Arts was founded by Grand Master Penny Shannon in 1991. The name "Shanaki" is a combination of the founder's last name, Shannon, and the Japanese word "Ki," which means internal energy or life force.</p>
+        <p>Grand Master Shannon's vision was to create a martial arts system that combined the traditional values of Shotokan Karate with modern self-defense techniques and a strong emphasis on character development. Over the years, Shanaki has grown from a small local studio to a well-respected institution with multiple locations and a dedicated community of students and instructors.</p>
+        <p>The system continues to evolve, integrating elements of various disciplines while remaining true to its core principles of honor, respect, and discipline.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="weapons section-padding">
+    <div class="container">
+        <h2 class="text-center">Kobudo: Okinawan Weapons</h2>
+        <p class="text-center weapons-intro">Kobudo is the study of traditional Okinawan weapons. At Shanaki, we learn the history, philosophy, and techniques of these ancient tools as an integral part of the warrior's path.</p>
+        <div class="weapons-grid">
+            <div class="weapon-item">
+                <h3>Bo (staff)</h3>
+                <p>The most fundamental Okinawan weapon, teaching balance, reach, and leverage.</p>
+            </div>
+            <div class="weapon-item">
+                <h3>Sai</h3>
+                <p>A multi-functional weapon for striking, trapping, and blocking, requiring great dexterity.</p>
+            </div>
+            <div class="weapon-item">
+                <h3>Nunchaku</h3>
+                <p>Developing hand-eye coordination and fluid motion, a classic of the martial arts.</p>
+            </div>
+            <div class="weapon-item">
+                <h3>Tonfa & Kama</h3>
+                <p>Advanced weapons including the handled club (Tonfa) and the traditional sickle (Kama).</p>
+            </div>
+        </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .philosophy-hero {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-bottom: 5px solid var(--color-red);
+  }
+
+  .philosophy-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .honor-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fdfdfd;
+    padding: 4rem;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  }
+
+  .honor-line {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .emphasized {
+    color: var(--color-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .final-honor {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-black);
+    letter-spacing: 2px;
+  }
+
+  .bg-dark {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .bg-dark h2 {
+    color: var(--color-red);
+  }
+
+  .history-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .history-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .weapons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+  }
+
+  .weapon-item {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+  }
+
+  .weapon-item h3 {
+      color: var(--color-red);
+      margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .honor-content {
+      padding: 2rem 1rem;
+    }
+    .honor-line {
+      font-size: 0.95rem;
+    }
+    .final-honor {
+      font-size: 1.8rem;
+    }
+  }
+</style>

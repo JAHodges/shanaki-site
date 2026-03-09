@@ -1,0 +1,142 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="The Dojo">
+  <section class="dojo-hero section-padding">
+    <div class="container text-center">
+      <h1>Our Studio & Instructors</h1>
+      <p>A legacy of excellence in martial arts training.</p>
+    </div>
+  </section>
+
+  <section class="grandmaster section-padding">
+    <div class="container">
+      <div class="gm-grid">
+        <div class="gm-image">
+           <svg width="100%" height="400" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#eee" />
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#ccc" font-size="20">GM Penny Shannon Placeholder</text>
+          </svg>
+        </div>
+        <div class="gm-content">
+          <h2>Grand Master Penny Shannon</h2>
+          <p class="role">Founder & President</p>
+          <p>Grand Master Penny Shannon is the founder and president of Shanaki Martial Arts Studios and Health Systems, Inc. She began her martial arts training in 1974 and has over 40 years of experience. She holds a 10th Degree Black Belt in Shotokan Karate and a 10th Degree Black Belt in Shanaki Blended Martial Arts.</p>
+          <p>Grand Master Shannon has trained thousands of students and has produced hundreds of Black Belts. She is a member of the World Martial Arts Hall of Fame and has received numerous awards for her contributions to the martial arts community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instructors section-padding bg-light">
+    <div class="container">
+      <h2 class="text-center">Our Teaching Team</h2>
+      <div class="instructor-grid">
+        <div class="instructor-card">
+          <div class="inst-img-placeholder"></div>
+          <h3>Master Scot Shannon</h3>
+          <p class="inst-rank">7th Degree Black Belt</p>
+          <p class="inst-bio">With over 30 years of experience, Master Scot is known for his expertise in weapons and self-defense. He is a 7th Degree Black Belt in both Shotokan and Shanaki Blended Martial Arts.</p>
+        </div>
+        <div class="instructor-card">
+          <div class="inst-img-placeholder"></div>
+          <h3>Sensei Shawna Shannon</h3>
+          <p class="inst-rank">4th Degree Black Belt</p>
+          <p class="inst-bio">Lead instructor for Kids Kikkin' It, Sensei Shawna specializes in youth development and holds 4th Degree Black Belts in Shotokan and Blended Martial Arts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .dojo-hero {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-bottom: 5px solid var(--color-red);
+  }
+
+  .gm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .gm-content h2 {
+    color: var(--color-red);
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  .role {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .gm-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .bg-light {
+    background-color: #f9f9f9;
+  }
+
+  .instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .instructor-card {
+    text-align: center;
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .inst-img-placeholder {
+    width: 120px;
+    height: 120px;
+    background: #eee;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--color-red);
+  }
+
+  .instructor-card h3 {
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+  }
+
+  .inst-rank {
+    color: var(--color-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .inst-bio {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .gm-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

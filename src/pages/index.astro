@@ -1,0 +1,218 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+---
+
+<MainLayout title="Home">
+	<!-- Hero Section -->
+	<section class="hero section-padding">
+		<div class="container text-center animate">
+			<h1 class="hero-title">Forge Your <span>Character</span></h1>
+			<p class="hero-subtitle">Wytheville's Premier Martial Arts Studio. Honor, Respect, Self-Discipline.</p>
+			<div class="hero-actions">
+				<a href="/contact" class="btn">Get a Free Class</a>
+				<a href="/programs" class="btn btn-outline">Explore Programs</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mission Section -->
+	<section class="mission section-padding bg-light">
+		<div class="container">
+			<div class="mission-grid">
+				<div class="mission-content animate">
+          <div class="badge">EST. 1991</div>
+					<h2>The Mission of Shanaki</h2>
+					<p>Our mission is to help people of all ages achieve their full potential through the study of martial arts. We believe that by practicing the ancient arts of Shotokan and Shanaki Blended Martial Arts, our students can build the confidence, discipline, and physical strength they need to succeed in all areas of life.</p>
+					<p>At Shanaki Martial Arts, we are committed to providing a safe, supportive, and challenging environment where every student can grow at their own pace and reach their goals.</p>
+				</div>
+				<div class="mission-image animate">
+					<div class="img-frame">
+						<svg width="100%" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="missionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop offset="0%" style="stop-color:#121212;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#A50000;stop-opacity:1" />
+								</linearGradient>
+							</defs>
+							<rect width="100%" height="100%" fill="url(#missionGrad)" />
+							<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#ccc" font-family="Oswald" font-size="20">Character Building</text>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Programs Highlights -->
+	<section class="highlights section-padding">
+		<div class="container">
+			<div class="section-header">
+				<h2>Our Programs</h2>
+				<p>From pre-K education to adult blended systems, we have a path for everyone.</p>
+			</div>
+			<div class="programs-grid animate">
+				<ProgramCard 
+					title="Kids Kikkin' It (Pre-K)" 
+					description="Ages 3-5. Wythe County's only licensed facility with a licensed VA teacher. Focusing on coordination, academics, and character." 
+          href="/programs/pre-k"
+				/>
+				<ProgramCard 
+					title="After School Program" 
+					description="Comprehensive care including transportation from local schools, study time, and daily martial arts training." 
+          href="/programs/after-school"
+				/>
+				<ProgramCard 
+					title="Adult Blended Martial Arts" 
+					description="Tuesdays & Thursdays, 7:00 PM – 8:30 PM. A unique system blending Shotokan, Judo, Jujitsu, and Aikido." 
+          href="/programs"
+				/>
+			</div>
+		</div>
+	</section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner section-padding bg-dark text-center">
+    <div class="container animate">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Join the hundreds of students who have transformed their lives at Shanaki.</p>
+      <a href="/contact" class="btn">Schedule Your Free Class</a>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+	.hero {
+		background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/images/hero-bg.jpg') center/cover no-repeat;
+		color: var(--color-white);
+		min-height: 90vh;
+		display: flex;
+		align-items: center;
+		background-color: var(--color-black);
+    position: relative;
+    overflow: hidden;
+	}
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-gray-light);
+    transform: skewY(-2deg);
+  }
+
+	.hero-title {
+		font-size: 5rem;
+		margin-bottom: 1.5rem;
+		text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    line-height: 1.1;
+	}
+
+  .hero-title span {
+    color: var(--color-red);
+    display: block;
+  }
+
+	.hero-subtitle {
+		font-size: 1.5rem;
+		margin-bottom: 3.5rem;
+		font-family: var(--font-heading);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+	}
+
+	.hero-actions {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.mission-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+		align-items: center;
+	}
+
+  .badge {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+  }
+
+	.mission-content h2 {
+		color: var(--color-black);
+		margin-bottom: 2rem;
+		font-size: 3rem;
+    line-height: 1.1;
+	}
+
+	.mission-content p {
+		margin-bottom: 2rem;
+		font-size: 1.15rem;
+		color: #444;
+	}
+
+  .img-frame {
+    position: relative;
+    padding: 1rem;
+    border: 2px solid var(--color-red);
+    border-radius: 4px;
+  }
+
+  .img-frame::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    border-top: 5px solid var(--color-red);
+    border-right: 5px solid var(--color-red);
+  }
+
+	.programs-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 3rem;
+		margin-top: 1rem;
+	}
+
+  .cta-banner h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-banner p {
+    color: #ccc;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+
+	@media (max-width: 992px) {
+		.hero-title { font-size: 3.5rem; }
+    .mission-grid { gap: 3rem; }
+    .mission-content h2 { font-size: 2.5rem; }
+	}
+
+	@media (max-width: 768px) {
+		.hero-actions { flex-direction: column; gap: 1rem; }
+    .hero-actions .btn { width: 100%; }
+		.mission-grid { grid-template-columns: 1fr; }
+    .mission-image { order: -1; }
+    .cta-banner h2 { font-size: 2.5rem; }
+	}
+</style>

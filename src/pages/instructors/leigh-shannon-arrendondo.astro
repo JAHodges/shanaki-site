@@ -1,0 +1,82 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Master L. Leigh Shannon Arrendondo">
+  <section class="profile-hero section-padding bg-dark">
+    <div class="container">
+      <div class="profile-grid">
+        <div class="profile-visual animate">
+          <div class="action-silhouette">
+            <!-- Yoga/Flexibility Silhouette -->
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#1a1a1a" />
+              <path d="M200 150 L250 250 L150 250 Z" fill="#A50000" opacity="0.3" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Oswald" font-size="20">FLEXIBILITY SILHOUETTE</text>
+            </svg>
+          </div>
+        </div>
+        <div class="profile-info animate">
+          <div class="badge">Master Instructor</div>
+          <h1>Master <span>L. Leigh Shannon Arrendondo</span></h1>
+          <p class="rank">4th Degree Black Belt</p>
+          <div class="credentials-row">
+            <span>Certified Yoga Instructor</span>
+            <span class="dot"></span>
+            <span>Kata & Weapons Expert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bio-content section-padding">
+    <div class="container">
+      <div class="text-layout">
+        <div class="bio-verbatim">
+          <p>"I started my martial arts training under the instruction of my mother, Grand Master Penny Shannon. I currently hold the rank of 4th Degree Black Belt in Shotokan Karate.</p>
+
+          <p>I have competed in many tournaments and have won several awards for my skills in kata and weapons. I have also been an assistant instructor at Shanaki Martial Arts for many years.</p>
+
+          <p>In addition to my training in Shotokan, I have also studied other martial arts styles and have trained in various weapons. I am also a certified yoga instructor and incorporate yoga and stretching into my martial arts classes.</p>
+
+          <p>My mission is to help my students develop self-awareness and inner peace through the practice of martial arts. I believe that martial arts is a journey of self-discovery and personal growth."</p>
+        </div>
+        <div class="sidebar">
+          <div class="quick-facts">
+            <h4>Quick Facts</h4>
+            <ul>
+              <li>Base Style: Shotokan</li>
+              <li>Secondary: Yoga & Stretching</li>
+              <li>Focus: Self-Awareness</li>
+            </ul>
+          </div>
+          <a href="/instructors" class="btn btn-outline-dark">Back to Instructors</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  /* Sharing same styles as other profiles */
+  .profile-hero { border-bottom: 5px solid var(--color-red); padding-bottom: 0; }
+  .profile-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: end; }
+  .action-silhouette { border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: var(--shadow-lg); background: #1a1a1a; }
+  .profile-info { padding-bottom: 4rem; }
+  .profile-info h1 { font-size: 3rem; margin: 1rem 0; line-height: 1.1; }
+  .profile-info h1 span { color: var(--color-red); }
+  .profile-info .rank { font-size: 1.5rem; color: #888; margin-bottom: 2rem; }
+  .credentials-row { display: flex; align-items: center; gap: 1.5rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; font-family: var(--font-heading); color: var(--color-red); }
+  .dot { width: 6px; height: 6px; background: #444; border-radius: 50%; }
+  .text-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; }
+  .bio-verbatim p { font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem; color: #333; }
+  .sidebar { position: sticky; top: 120px; height: fit-content; }
+  .quick-facts { background: #f9f9f9; padding: 2rem; border-radius: 4px; margin-bottom: 2rem; border-left: 4px solid var(--color-red); }
+  .quick-facts h4 { margin-bottom: 1.5rem; color: var(--color-black); }
+  .quick-facts ul { list-style: none; }
+  .quick-facts li { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
+  .btn-outline-dark { border-color: var(--color-black); color: var(--color-black); width: 100%; text-align: center; }
+  .btn-outline-dark:hover { background: var(--color-black); color: var(--color-white); }
+  @media (max-width: 992px) { .profile-grid, .text-layout { grid-template-columns: 1fr; gap: 3rem; } .profile-info { padding-bottom: 2rem; } .profile-info h1 { font-size: 2.5rem; } }
+</style>

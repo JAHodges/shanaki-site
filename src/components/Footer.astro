@@ -1,0 +1,85 @@
+---
+---
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Shanaki Martial Arts</h3>
+      <p>Wytheville's premier destination for character building, discipline, and martial arts excellence.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Location</h4>
+      <p>585 Stafford Umberger Drive</p>
+      <p>Wytheville, VA 24382</p>
+      <p><a href="https://www.google.com/maps/dir//585+Stafford+Umberger+Dr,+Wytheville,+VA+24382" target="_blank" rel="noopener" class="map-link">Get Directions &rarr;</a></p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Connect</h4>
+      <p>Phone: <a href="tel:2762286543">(276) 228-6543</a></p>
+      <p><a href="https://www.facebook.com/Shankido" target="_blank" rel="noopener">Like us on Facebook</a></p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {new Date().getFullYear()} Shanaki Martial Arts. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 4rem 0 2rem;
+    border-top: 5px solid var(--color-red);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+
+  .footer-section h3, .footer-section h4 {
+    color: var(--color-red);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .footer-section p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section a {
+    color: var(--color-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: var(--color-white);
+  }
+
+  .map-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.8rem;
+  }
+</style>

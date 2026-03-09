@@ -1,0 +1,223 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact & Schedule">
+  <section class="contact-hero section-padding">
+    <div class="container text-center">
+      <h1>Join the Dojo</h1>
+      <p>Start your journey with a free introductory class.</p>
+    </div>
+  </section>
+
+  <section class="studio-info section-padding">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Location</h3>
+          <p>Shanaki Martial Arts</p>
+          <p>Wytheville, Virginia</p>
+          <p>Phone: (276) 783-6700</p>
+          <p>Email: shanakimartialarts@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <h3>Hours of Operation</h3>
+          <ul class="hours-list">
+            <li><span>Mon - Thu:</span> <span>3:30 PM – 8:30 PM</span></li>
+            <li><span>Friday:</span> <span>3:30 PM – 7:00 PM</span></li>
+            <li><span>Saturday:</span> <span>9:00 AM – 12:00 PM</span></li>
+            <li><span>Sunday:</span> <span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule-section section-padding bg-light">
+    <div class="container">
+      <h2 class="text-center">Class Schedule</h2>
+      <div class="schedule-grid">
+        <div class="schedule-card">
+          <h3>Tuesdays</h3>
+          <ul>
+            <li><strong>6:00 PM - 7:00 PM:</strong> Youth Classes</li>
+            <li><strong>7:00 PM - 8:30 PM:</strong> Adult Shotokan & Blended Martial Arts</li>
+          </ul>
+        </div>
+        <div class="schedule-card">
+          <h3>Thursdays</h3>
+          <ul>
+            <li><strong>6:00 PM - 7:00 PM:</strong> Youth Classes</li>
+            <li><strong>7:00 PM - 8:30 PM:</strong> Adult Shotokan & Blended Martial Arts</li>
+          </ul>
+        </div>
+        <div class="schedule-card">
+          <h3>Other Programs</h3>
+          <p>Kids Kikkin' It and After School programs are scheduled seasonally. Please contact us for the latest session times.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form-section section-padding">
+    <div class="container">
+      <div class="form-container">
+        <h2 class="text-center">Get Your Free Class Coupon</h2>
+        <p class="text-center">Fill out the form below and we'll reach out to schedule your first visit.</p>
+        
+        <form class="placeholder-form" onsubmit="event.preventDefault(); alert('This is a placeholder form. In the final version, this will connect to Google Forms.');">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="program">Interested Program</label>
+            <select id="program" name="program">
+              <option value="youth">Youth Martial Arts</option>
+              <option value="adult">Adult Shotokan & Blended Martial Arts</option>
+              <option value="kids">Kids Kikkin' It</option>
+              <option value="afterschool">After School Program</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Send Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .contact-hero {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-bottom: 5px solid var(--color-red);
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .info-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+  }
+
+  .info-card h3 {
+    color: var(--color-red);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .hours-list {
+    list-style: none;
+  }
+
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #eee;
+  }
+
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .schedule-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--color-red);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .schedule-card h3 {
+    color: var(--color-red);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+
+  .schedule-card ul {
+    list-style: none;
+  }
+
+  .schedule-card li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .bg-light {
+    background-color: #f9f9f9;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+  }
+
+  .form-container h2 {
+    color: var(--color-red);
+    margin-bottom: 1rem;
+  }
+
+  .placeholder-form {
+    margin-top: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  .btn-block {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    .form-container {
+      padding: 1.5rem;
+    }
+  }
+</style>

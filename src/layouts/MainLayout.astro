@@ -1,0 +1,187 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Shanaki Martial Arts in Wytheville, VA - Character, Honor, Respect." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Shanaki Martial Arts</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<Navigation />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-red: #A50000;
+		--color-red-light: #C40000;
+		--color-red-dark: #7A0000;
+		--color-black: #121212;
+		--color-gray-dark: #1E1E1E;
+		--color-gray: #333333;
+		--color-gray-light: #F4F4F4;
+		--color-white: #FFFFFF;
+		--font-heading: 'Oswald', sans-serif;
+		--font-body: 'Roboto', sans-serif;
+		--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		--shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+		--shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+		--shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-body);
+		background-color: var(--color-white);
+		color: var(--color-black);
+		line-height: 1.6;
+		overflow-x: hidden;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		line-height: 1.2;
+	}
+
+	p {
+		font-weight: 300;
+		color: #444;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* Utility Classes */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	.section-padding {
+		padding: 6rem 0;
+	}
+
+	.text-center { text-align: center; }
+	.text-red { color: var(--color-red); }
+	.bg-dark { background-color: var(--color-black); color: var(--color-white); }
+	.bg-light { background-color: var(--color-gray-light); }
+
+	/* Button Styles */
+	.btn {
+		display: inline-block;
+		padding: 1rem 2.5rem;
+		background-color: var(--color-red);
+		color: var(--color-white);
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 1px;
+		border-radius: 2px;
+		transition: var(--transition);
+		border: 2px solid var(--color-red);
+		cursor: pointer;
+		font-family: var(--font-heading);
+	}
+
+	.btn:hover {
+		background-color: var(--color-red-dark);
+		border-color: var(--color-red-dark);
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--color-white);
+		border-color: var(--color-white);
+	}
+
+	.btn-outline:hover {
+		background: var(--color-white);
+		color: var(--color-black);
+		border-color: var(--color-white);
+	}
+
+	/* Animations */
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	.animate {
+		animation: fadeIn 0.8s ease-out forwards;
+	}
+
+	/* Section Headers */
+	.section-header {
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.section-header h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		position: relative;
+		display: inline-block;
+		padding-bottom: 15px;
+	}
+
+	.section-header h2::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 4px;
+		background-color: var(--color-red);
+	}
+
+	.section-header p {
+		font-size: 1.1rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 768px) {
+		.section-padding { padding: 4rem 0; }
+		.section-header h2 { font-size: 2rem; }
+	}
+</style>

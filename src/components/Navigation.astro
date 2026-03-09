@@ -1,0 +1,138 @@
+---
+import Logo from './Logo.astro';
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/programs', label: 'Programs' },
+  { href: '/instructors', label: 'Instructors' },
+  { href: '/bushido', label: 'Philosophy & History' },
+  { href: '/contact', label: 'Contact & Schedule' },
+  { href: '/members', label: 'Members' }
+];
+---
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <Logo />
+      <span>SHANAKI</span>
+    </a>
+    
+    <button class="nav-toggle" aria-label="Toggle Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-links">
+      {navItems.map(item => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .main-nav {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-red);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-family: var(--font-heading);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-logo:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    position: relative;
+    padding: 5px 0;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red);
+    transition: var(--transition);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-red);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: var(--transition);
+  }
+
+  @media (max-width: 992px) {
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .nav-links { display: none; }
+    .nav-logo span { font-size: 1.4rem; }
+  }
+</style>
