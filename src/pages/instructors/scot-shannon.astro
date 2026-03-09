@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
-
 <MainLayout title="Master Scot Shannon">
   <section class="profile-hero section-padding bg-dark">
     <div class="container">
@@ -48,7 +48,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
               <li>Specialty: Weapons & Self-Defense</li>
             </ul>
           </div>
-          <a href="/instructors" class="btn btn-outline-dark">Back to Instructors</a>
+          <a href={`${base}/instructors`} class="btn btn-outline-dark">Back to Instructors</a>
         </div>
       </div>
     </div>
@@ -77,3 +77,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
   .btn-outline-dark:hover { background: var(--color-black); color: var(--color-white); }
   @media (max-width: 992px) { .profile-grid, .text-layout { grid-template-columns: 1fr; gap: 3rem; } .profile-info { padding-bottom: 2rem; } .profile-info h1 { font-size: 3rem; } }
 </style>
+
+
+

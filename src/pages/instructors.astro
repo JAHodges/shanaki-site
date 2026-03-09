@@ -53,6 +53,8 @@ const masters = [
     summary: "A certified instructor since age 14 who began training at age 2. An honor student, multi-sport athlete, and active member of the junior ROTC."
   }
 ];
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout title="Instructors">
@@ -71,7 +73,7 @@ const masters = [
     </div>
   </section>
 
-  <!-- Founder Spotlight -->
+  <!-- Founder Spotlight - Refined & Compact -->
   <section class="founder-spotlight section-padding">
     <div class="container">
       <div class="founder-card animate">
@@ -88,7 +90,7 @@ const masters = [
             <h2>{grandMaster.name}</h2>
             <p class="inst-rank-top">{grandMaster.rank}</p>
             <p class="inst-summary-top">{grandMaster.summary}</p>
-            <a href={`/instructors/${grandMaster.slug}`} class="btn btn-small">Read Full Story &rarr;</a>
+            <a href={`${base}/instructors/${grandMaster.slug}`} class="btn btn-small">Read Full Story &rarr;</a>
           </div>
         </div>
       </div>
@@ -105,7 +107,7 @@ const masters = [
 
       <div class="instructors-grid animate">
         {masters.map(inst => (
-          <a href={`/instructors/${inst.slug}`} class="instructor-card">
+          <a href={`${base}/instructors/${inst.slug}`} class="instructor-card">
             <div class="inst-content">
               <p class="inst-title">{inst.title}</p>
               <h3>{inst.name}</h3>

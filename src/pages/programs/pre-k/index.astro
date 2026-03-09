@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../../../layouts/MainLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
-
 <MainLayout title="Kids Kikkin' It (Pre-K)">
   <section class="program-hero section-padding bg-dark text-center">
     <div class="container animate">
@@ -101,7 +101,7 @@ import MainLayout from '../../../layouts/MainLayout.astro';
           </div>
         </div>
         <div class="box-footer">
-          <a href="/contact" class="btn">Check Availability</a>
+          <a href={`${base}/contact`} class="btn">Check Availability</a>
         </div>
       </div>
     </div>
@@ -283,3 +283,6 @@ import MainLayout from '../../../layouts/MainLayout.astro';
     .content-box h3 { font-size: 2rem; }
   }
 </style>
+
+
+

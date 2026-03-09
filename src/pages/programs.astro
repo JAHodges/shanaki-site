@@ -1,5 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout title="Programs">
@@ -16,7 +18,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="detail-content">
           <h2>Kids Kikkin' It (Pre-K)</h2>
           <p>Our Kids Kikkin' It program is specifically designed for children aged 3 to 5. We focus on early childhood development through martial arts, building coordination, focus, and listening skills in a fun and engaging environment.</p>
-          <a href="/programs/pre-k" class="btn">View Pre-K Program</a>
+          <a href={`${base}/programs/pre-k`} class="btn">View Pre-K Program</a>
         </div>
         <div class="detail-image">
            <svg width="100%" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +32,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="detail-content">
           <h2>After School Program</h2>
           <p>Providing a productive and safe alternative for your child's afternoon. Includes transportation from local schools, supervised study time, and daily martial arts classes to reinforce honor and discipline.</p>
-          <a href="/programs/after-school" class="btn">View After School Program</a>
+          <a href={`${base}/programs/after-school`} class="btn">View After School Program</a>
         </div>
         <div class="detail-image">
            <svg width="100%" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +47,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <h2>Youth & Adult Classes</h2>
           <p>Our core classes combine the tradition of Shotokan Karate with the unique Shanaki Blended Martial Arts system. Developed by Grand Master Penny Shannon, this approach combines techniques from Shotokan, Judo, Jujitsu, Aikido, and Kung Fu for a versatile and effective self-defense education.</p>
           <p><strong>Youth:</strong> 6:00 PM - 7:00 PM (Tue/Thu)<br><strong>Adult:</strong> 7:00 PM - 8:30 PM (Tue/Thu)</p>
-          <a href="/contact" class="btn">Join a Class</a>
+          <a href={`${base}/contact`} class="btn">Join a Class</a>
         </div>
         <div class="detail-image">
            <svg width="100%" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">

@@ -1,51 +1,10 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout title="Grand Master Penny Shannon">
-  <section class="profile-hero section-padding bg-dark">
-    <div class="container">
-      <div class="profile-grid">
-        <div class="profile-visual animate">
-          <div class="action-silhouette">
-            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100%" height="100%" fill="#1a1a1a" />
-              <path d="M200 100 L230 200 L300 200 L240 260 L260 350 L200 300 L140 350 L160 260 L100 200 L170 200 Z" fill="#A50000" opacity="0.5" />
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Oswald" font-size="20">FOUNDER SILHOUETTE</text>
-            </svg>
-          </div>
-        </div>
-        <div class="profile-info animate">
-          <div class="badge">Founder & President</div>
-          <h1>Grand Master <span>Penny Shannon</span></h1>
-          <p class="rank">10th Degree Black Belt</p>
-          <div class="credentials-row">
-            <span>40+ Years Experience</span>
-            <span class="dot"></span>
-            <span>Hall of Fame Inductee</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bio-content section-padding">
-    <div class="container">
-      <div class="text-layout">
-        <div class="bio-verbatim">
-          <p>Beginning her journey in the martial arts over forty years ago, Grand Master Penny Shannon has mentored and educated countless individuals in living the martial way. After training under a variety of instructors and obtaining her first degree Black Belt, she felt like something was missing from it all. Most of the "Americanized" training that she received seemed to focus primarily on the physical aspects of martial arts. It was at this time that she began to study the philosophies and practices of the eastern culture. Continuing her physical training, Grand Master Shannon discovered an instructional methodology that allowed her to tie together mind and body. Over the next couple of years, she abstracted the best physical attributes of various martial arts styles and integrated them with a very specific code of ethics. Shortly after, the Shanaki Martial Arts System was born.</p>
-
-          <p>Mrs. Shannon now holds an 8th Degree Black Belt in Shotokan (Japanese) under Grand Master Eddie Thomas, 6th Degree in Shotokan, and a 2nd Degree Black Belt in Kobudo (Martial Weaponry) under Grand Master Marc Cantrell. She also holds a 1st Degree Black Belts in Tae Kwon Do, Shorinji-Ryu, and American Freestyle Karate. Additionally, she has extensive crossover training in Aikido, Wing Chung, Wushu Kung Fu, Kali, Arnis, Kick Boxing, and Submission Grappling among many other styles. She has trained under some of the world's most renowned martial arts experts.</p>
-
-          <p>Grand Master Shannon has produced one World Champion and twenty-four top ten nationally rated martial arts competitors. Seventeen of these champions have been rated in the top three, and seven have been ranked at the number one spot. She has trained four National Olympic Qualifiers and multiple state and regional champions. Grand Master Shannon is also a Certified Olympic Coach and Referee as well as a Certified North American Sport Karate National Team Coach and Referee.</p>
-
-          <p>Grand Master Shannon's training expertise was recognised by the World Martial Arts Organization and she was chosen to represent the U.S. National Martial Arts team at the World Martial Arts "World Cup" in Honolulu, Hawaii.</p>
-
-          <p>In recognition of her many accomplishments and contributions in the martial arts world and to the community at large, Master Shannon is a two-time inductee into the International Black Belt Hall of Fame for Instructor of the year and the Lifetime Achievement Award. She has been featured in <em>Woman's World Magazine, Police Magazine, Karate/Kung Fu Illustrated, Black Belt Magazine, and Sport Karate Illustrated.</em> She has also been a guest on the National Talk Show "<em>In Focus</em>". Master Shannon was also appointed to the National Congressional Business Advisory Council.</p>
-
-          <p>Grand Master Shannon has declared it her ultimate goal to bring confidence, hope, and a sense of peace to all those who seek it.</p>
-        </div>
-        <div class="sidebar">
+...
           <div class="quick-facts">
             <h4>Quick Facts</h4>
             <ul>
@@ -54,7 +13,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
               <li>Rank: 10th Dan</li>
             </ul>
           </div>
-          <a href="/instructors" class="btn btn-outline-dark">Back to Instructors</a>
+          <a href={`${base}/instructors`} class="btn btn-outline-dark">Back to Instructors</a>
         </div>
       </div>
     </div>
@@ -62,23 +21,5 @@ import MainLayout from '../../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  .profile-hero { border-bottom: 5px solid var(--color-red); padding-bottom: 0; }
-  .profile-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: end; }
-  .action-silhouette { border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: var(--shadow-lg); background: #1a1a1a; }
-  .profile-info { padding-bottom: 4rem; }
-  .profile-info h1 { font-size: 4rem; margin: 1rem 0; line-height: 1; }
-  .profile-info h1 span { color: var(--color-red); }
-  .profile-info .rank { font-size: 1.5rem; color: #888; margin-bottom: 2rem; }
-  .credentials-row { display: flex; align-items: center; gap: 1.5rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; font-family: var(--font-heading); color: var(--color-red); }
-  .dot { width: 6px; height: 6px; background: #444; border-radius: 50%; }
-  .text-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; }
-  .bio-verbatim p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #333; }
-  .sidebar { position: sticky; top: 120px; height: fit-content; }
-  .quick-facts { background: #f9f9f9; padding: 2rem; border-radius: 4px; margin-bottom: 2rem; border-left: 4px solid var(--color-red); }
-  .quick-facts h4 { margin-bottom: 1.5rem; color: var(--color-black); }
-  .quick-facts ul { list-style: none; }
-  .quick-facts li { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
-  .btn-outline-dark { border-color: var(--color-black); color: var(--color-black); width: 100%; text-align: center; }
-  .btn-outline-dark:hover { background: var(--color-black); color: var(--color-white); }
-  @media (max-width: 992px) { .profile-grid, .text-layout { grid-template-columns: 1fr; gap: 3rem; } .profile-info { padding-bottom: 2rem; } .profile-info h1 { font-size: 3rem; } }
-</style>
+...
+
