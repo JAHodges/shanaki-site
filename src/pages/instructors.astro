@@ -1,55 +1,56 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
-const instructors = [
-  { 
-    name: "Grand Master Penny Shannon", 
-    rank: "10th Degree Black Belt", 
-    title: "Founder & President",
-    slug: "penny-shannon",
-    summary: "First woman in Illinois promoted to Black Belt in the USKA. 40+ years experience."
-  },
+const grandMaster = { 
+  name: "Grand Master Penny Shannon", 
+  rank: "10th Degree Black Belt", 
+  title: "Founder & President",
+  slug: "penny-shannon",
+  summary: "First woman in the state of Illinois to be promoted to the rank of Black Belt in the United States Karate Association. With over 40 years of experience, she is the visionary behind the Shanaki system."
+};
+
+const masters = [
   { 
     name: "Master Scot Shannon", 
     rank: "6th Degree Black Belt", 
     title: "Master Instructor",
     slug: "scot-shannon",
-    summary: "State and National champion. Expert in traditional weapons and self-defense."
+    summary: "State and National champion. Expert in traditional weapons and self-defense with over 30 years of training."
   },
   { 
     name: "Master Tammy Shannon Warden", 
     rank: "5th Degree Black Belt", 
     title: "Master Instructor",
     slug: "tammy-shannon-warden",
-    summary: "Certified fitness instructor specializing in youth development and character building."
+    summary: "Certified fitness instructor specializing in youth development and building confidence in children."
   },
   { 
     name: "Master Jason Gullion", 
     rank: "5th Degree Black Belt", 
     title: "Master Instructor",
     slug: "jason-gullion",
-    summary: "Dedicated instructor for 15+ years. Specialist in Aikido and Brazilian Jiu-Jitsu."
+    summary: "Dedicated instructor for 15+ years. Specialist in Aikido, Brazilian Jiu-Jitsu, and traditional weapons."
   },
   { 
     name: "Master Shawna Shannon", 
     rank: "4th Degree Black Belt", 
     title: "Master Instructor",
     slug: "shawna-shannon",
-    summary: "Licensed massage therapist utilizing body mechanics to improve martial arts technique."
+    summary: "Licensed massage therapist utilizing deep knowledge of body mechanics to improve martial arts technique."
   },
   { 
     name: "Master L. Leigh Shannon Arrendondo", 
     rank: "4th Degree Black Belt", 
     title: "Master Instructor",
     slug: "leigh-shannon-arrendondo",
-    summary: "Certified yoga instructor focused on self-awareness and personal growth through kata."
+    summary: "Certified yoga instructor focused on self-awareness, personal growth, and fluid motion."
   },
   { 
     name: "Sensei Trey Warden", 
     rank: "2nd Degree Black Belt", 
     title: "Instructor",
     slug: "trey-warden",
-    summary: "Multi-sport athlete and role model dedicated to student goals and discipline."
+    summary: "Multi-sport athlete and certified educator dedicated to being a positive role model for the next generation."
   }
 ];
 ---
@@ -59,7 +60,7 @@ const instructors = [
     <div class="container animate">
       <div class="badge">Certified Leadership</div>
       <h1>Our <span>Instructors</span></h1>
-      <p class="hero-subtitle">Meet the team dedicated to preserving the legacy of Shanaki.</p>
+      <p class="hero-subtitle">Meet the team dedicated to preserving the legacy of Shanaki Martial Arts.</p>
       <div class="trust-bar">
         <span>Minimum 2nd Degree Black Belt</span>
         <span class="dot"></span>
@@ -70,22 +71,41 @@ const instructors = [
     </div>
   </section>
 
-  <section class="gallery-section section-padding">
+  <!-- Founder Spotlight -->
+  <section class="founder-spotlight section-padding">
+    <div class="container">
+      <div class="founder-card animate">
+        <div class="founder-grid">
+          <div class="founder-visual">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" fill="#1a1a1a" />
+              <path d="M50 20 L80 80 L20 80 Z" fill="#A50000" opacity="0.3" />
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="Oswald" font-size="10">GM SILHOUETTE</text>
+            </svg>
+          </div>
+          <div class="founder-content">
+            <p class="inst-title">{grandMaster.title}</p>
+            <h2>{grandMaster.name}</h2>
+            <p class="inst-rank">{grandMaster.rank}</p>
+            <p class="inst-summary">{grandMaster.summary}</p>
+            <a href={`/instructors/${grandMaster.slug}`} class="btn">Read Her Full Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="team-section section-padding bg-light">
     <div class="container">
       <div class="section-header animate">
-        <h2>The Teaching Team</h2>
-        <p>Click on any instructor to read their full, first-person story and martial arts philosophy.</p>
+        <h2>The Master Black Belts</h2>
+        <p>A legacy of discipline, expertise, and dedication.</p>
       </div>
 
       <div class="instructors-grid animate">
-        {instructors.map(inst => (
+        {masters.map(inst => (
           <a href={`/instructors/${inst.slug}`} class="instructor-card">
-            <div class="inst-visual">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="48" fill="#f9f9f9" stroke="#eee" stroke-width="1" />
-                <path d="M50 30 L60 50 L40 50 Z" fill="#A50000" opacity="0.5" />
-              </svg>
-            </div>
             <div class="inst-content">
               <p class="inst-title">{inst.title}</p>
               <h3>{inst.name}</h3>
@@ -99,11 +119,11 @@ const instructors = [
     </div>
   </section>
 
-  <section class="standard-section section-padding bg-light">
-    <div class="container text-center animate">
+  <section class="standard-section section-padding">
+    <div class="container animate">
       <div class="cert-box">
-        <h2>The Shanaki Standard</h2>
-        <p>Every lead instructor has passed a specific certification course developed by Grand Master Penny Shannon. This ensures safety, consistency, and adherence to the core values of our system.</p>
+        <h2 class="text-center">The Shanaki Standard</h2>
+        <p>Every lead instructor has passed a specific certification course developed by Grand Master Penny Shannon. This ensures safety, consistency, and adherence to the core values of our system. While we offer instruction in several styles, Shotokan remains the base style for all student ranking.</p>
       </div>
     </div>
   </section>
@@ -134,17 +154,81 @@ const instructors = [
 
   .dot { width: 6px; height: 6px; background-color: #333; border-radius: 50%; }
 
+  /* Founder Spotlight */
+  .founder-card {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border-bottom: 5px solid var(--color-red);
+  }
+
+  .founder-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+  }
+
+  .founder-visual {
+    height: 100%;
+    min-height: 400px;
+  }
+
+  .founder-visual svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .founder-content {
+    padding: 4rem;
+  }
+
+  .founder-content h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+  }
+
+  /* Shared Instructor Styles */
+  .inst-title {
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-red);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .inst-rank {
+    font-weight: 600;
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .inst-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+  }
+
+  /* Team Grid */
   .instructors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
   }
 
   .instructor-card {
     background: var(--color-white);
     border-radius: 4px;
-    padding: 3rem 2rem;
-    text-align: center;
+    padding: 3.5rem 3rem;
     text-decoration: none;
     color: inherit;
     box-shadow: var(--shadow-sm);
@@ -152,7 +236,6 @@ const instructors = [
     border-top: 4px solid var(--color-gray);
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .instructor-card:hover {
@@ -161,41 +244,21 @@ const instructors = [
     border-color: var(--color-red);
   }
 
-  .inst-visual {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 2rem;
-  }
-
-  .inst-title {
-    text-transform: uppercase;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--color-red);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-  }
-
   .instructor-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    line-height: 1.2;
+    color: var(--color-black);
   }
 
-  .inst-rank {
-    font-weight: 600;
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-  }
-
-  .inst-summary {
-    font-size: 0.95rem;
+  .instructor-card .inst-rank {
     color: #666;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .instructor-card .inst-summary {
+    color: #555;
+    font-size: 1rem;
     flex-grow: 1;
   }
 
@@ -203,28 +266,37 @@ const instructors = [
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    color: var(--color-black);
-    transition: color 0.3s ease;
-  }
-
-  .instructor-card:hover .read-more {
+    font-size: 0.9rem;
     color: var(--color-red);
+    letter-spacing: 1px;
+    margin-top: 2rem;
   }
 
+  /* Cert Box */
   .cert-box {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 4rem;
-    background: white;
+    background: #fdfdfd;
     border: 1px solid #eee;
     box-shadow: var(--shadow-md);
+    text-align: center;
+    border-left: 5px solid var(--color-red);
   }
 
   .cert-box h2 { margin-bottom: 1.5rem; color: var(--color-red); }
+  .cert-box p { font-size: 1.1rem; line-height: 1.8; color: #444; }
+
+  @media (max-width: 992px) {
+    .founder-grid { grid-template-columns: 1fr; }
+    .founder-visual { min-height: 300px; }
+    .founder-content { padding: 3rem 2rem; }
+    .founder-content h2 { font-size: 2.2rem; }
+  }
 
   @media (max-width: 768px) {
     .trust-bar { flex-direction: column; gap: 0.5rem; }
     .dot { display: none; }
+    .instructor-card { padding: 2.5rem 2rem; }
   }
 </style>
