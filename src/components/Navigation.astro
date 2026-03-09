@@ -1,8 +1,6 @@
 ---
 import Logo from './Logo.astro';
 
-// Use Astro.base to prefix links if necessary, 
-// but usually absolute paths starting with / work automatically in Astro with 'base' set.
 const base = import.meta.env.BASE_URL;
 const navItems = [
   { href: `${base}`, label: 'Home' },
@@ -20,19 +18,39 @@ const navItems = [
       <span>SHANAKI</span>
     </a>
     
-    <button class="nav-toggle" aria-label="Toggle Navigation">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
     
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       {navItems.map(item => (
         <li><a href={item.href}>{item.label}</a></li>
       ))}
     </ul>
   </div>
 </nav>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked (useful for single-page feeling or slow transitions)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+  }
+</script>
 
 <style>
   .main-nav {
@@ -118,24 +136,65 @@ const navItems = [
     background: transparent;
     border: none;
     cursor: pointer;
+    padding: 5px;
   }
 
   .nav-toggle span {
     width: 25px;
-    height: 2px;
+    height: 3px;
     background-color: var(--color-white);
     transition: var(--transition);
+    border-radius: 2px;
+  }
+
+  /* Hamburger Animation */
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   @media (max-width: 992px) {
     .nav-links {
-      gap: 1rem;
+      gap: 1.2rem;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
     }
   }
 
   @media (max-width: 768px) {
     .nav-toggle { display: flex; }
-    .nav-links { display: none; }
+    
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-black);
+      padding: 2rem;
+      border-bottom: 2px solid var(--color-red);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .nav-links.active {
+      display: flex;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .nav-logo span { font-size: 1.4rem; }
   }
 </style>
