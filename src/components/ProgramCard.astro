@@ -6,7 +6,9 @@ interface Props {
   href?: string;
 }
 
+const base = import.meta.env.BASE_URL;
 const { title, description, imagePlaceholder = "martial-arts-placeholder.jpg", href = "/programs" } = Astro.props;
+const finalHref = href.startsWith('http') ? href : `${base}${href}`.replace(/\/+/g, '/');
 ---
 <div class="program-card">
   <div class="card-image">
@@ -26,7 +28,7 @@ const { title, description, imagePlaceholder = "martial-arts-placeholder.jpg", h
   <div class="card-content">
     <h3>{title}</h3>
     <p>{description}</p>
-    <a href={href} class="btn-text">Explore Program <span>&rarr;</span></a>
+    <a href={finalHref} class="btn-text">Explore Program <span>&rarr;</span></a>
   </div>
 </div>
 

@@ -1,6 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ProgramCard from '../components/ProgramCard.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout title="Home">
@@ -10,8 +12,8 @@ import ProgramCard from '../components/ProgramCard.astro';
 			<h1 class="hero-title">Forge Your <span>Character</span></h1>
 			<p class="hero-subtitle">Wytheville's Premier Martial Arts Studio. Honor, Respect, Self-Discipline.</p>
 			<div class="hero-actions">
-				<a href="/contact" class="btn">Get a Free Class</a>
-				<a href="/programs" class="btn btn-outline">Explore Programs</a>
+				<a href={`${base}/contact`} class="btn">Get a Free Class</a>
+				<a href={`${base}/programs`} class="btn btn-outline">Explore Programs</a>
 			</div>
 		</div>
 	</section>
@@ -76,7 +78,7 @@ import ProgramCard from '../components/ProgramCard.astro';
     <div class="container animate">
       <h2>Ready to Start Your Journey?</h2>
       <p>Join the hundreds of students who have transformed their lives at Shanaki.</p>
-      <a href="/contact" class="btn">Schedule Your Free Class</a>
+      <a href={`${base}/contact`} class="btn">Schedule Your Free Class</a>
     </div>
   </section>
 </MainLayout>

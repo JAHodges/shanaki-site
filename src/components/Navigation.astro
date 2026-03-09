@@ -3,18 +3,19 @@ import Logo from './Logo.astro';
 
 // Use Astro.base to prefix links if necessary, 
 // but usually absolute paths starting with / work automatically in Astro with 'base' set.
+const base = import.meta.env.BASE_URL;
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/programs', label: 'Programs' },
-  { href: '/instructors', label: 'Instructors' },
-  { href: '/bushido', label: 'Philosophy & History' },
-  { href: '/contact', label: 'Contact & Schedule' },
-  { href: '/members', label: 'Members' }
+  { href: `${base}`, label: 'Home' },
+  { href: `${base}/programs`, label: 'Programs' },
+  { href: `${base}/instructors`, label: 'Instructors' },
+  { href: `${base}/bushido`, label: 'Philosophy & History' },
+  { href: `${base}/contact`, label: 'Contact & Schedule' },
+  { href: `${base}/members`, label: 'Members' }
 ];
 ---
 <nav class="main-nav">
   <div class="nav-container">
-    <a href="/" class="nav-logo">
+    <a href={base} class="nav-logo">
       <Logo />
       <span>SHANAKI</span>
     </a>
