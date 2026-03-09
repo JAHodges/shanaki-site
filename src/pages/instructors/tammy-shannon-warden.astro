@@ -8,7 +8,6 @@ import MainLayout from '../../layouts/MainLayout.astro';
       <div class="profile-grid">
         <div class="profile-visual animate">
           <div class="action-silhouette">
-            <!-- Fitness/Youth Leader Silhouette -->
             <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
               <rect width="100%" height="100%" fill="#1a1a1a" />
               <circle cx="200" cy="200" r="80" fill="#A50000" opacity="0.3" />
@@ -19,11 +18,11 @@ import MainLayout from '../../layouts/MainLayout.astro';
         <div class="profile-info animate">
           <div class="badge">Master Instructor</div>
           <h1>Master <span>Tammy Shannon Warden</span></h1>
-          <p class="rank">5th Degree Black Belt</p>
+          <p class="rank">6th Degree Black Belt</p>
           <div class="credentials-row">
-            <span>30+ Years Experience</span>
+            <span>25+ Years Experience</span>
             <span class="dot"></span>
-            <span>Certified Fitness Instructor</span>
+            <span>Nurse Practitioner</span>
           </div>
         </div>
       </div>
@@ -34,21 +33,19 @@ import MainLayout from '../../layouts/MainLayout.astro';
     <div class="container">
       <div class="text-layout">
         <div class="bio-verbatim">
-          <p>"I began my martial arts journey at the age of 4 under the guidance of my mother, Grand Master Penny Shannon. I have been training for over 30 years and currently hold the rank of 5th Degree Black Belt in Shotokan Karate.</p>
+          <p>Tammy Shannon Warden, daughter to Master Penny Shannon, and mother to Sensei Trey Warden, holds a 6th degree Black Belt in Shotokan, 1st Degree Black Belts in American Freestyle, Shorinji-Ryu, and Tae Kwon Do. Tammy was the North American Sport Karate Association (N.A.S.K.A) number one rated female black belt competitor. She was the VA, NC, SC, and WV regional and state champion two years in a row. She was also a state and regional level Olympic qualifier. Tammy along with 1980 Miss America Cheryl Prewitt Salem and Master Marc Cantrell made one of the first martial arts workout videos. As a model Tammy's martial arts career was exhibited in various nationwide ad camapigns, including several automakers' products and clothing merchants.</p>
 
-          <p>I have competed in many tournaments over the years and have won several state and regional titles. I have also been recognized for my contributions to the martial arts community.</p>
+          <p>Tammy works as a Nurse Practioner with a Masters Degree in Nursing.</p>
 
-          <p>In addition to my training in Shotokan, I have also studied other martial arts styles and have trained in various weapons. I am also a certified fitness instructor and incorporate fitness and conditioning into my martial arts classes.</p>
-
-          <p>My passion is teaching children and helping them develop the skills and confidence they need to succeed in life. I believe that martial arts is a great way for kids to stay active, learn self-defense, and build character."</p>
+          <p>Tammy was a professional dancer who also plays two musical instruments.</p>
         </div>
         <div class="sidebar">
           <div class="quick-facts">
             <h4>Quick Facts</h4>
             <ul>
-              <li>Started Training: Age 4</li>
+              <li>Started Training: Childhood</li>
               <li>Base Style: Shotokan</li>
-              <li>Specialty: Youth Development & Fitness</li>
+              <li>Education: MS in Nursing</li>
             </ul>
           </div>
           <a href="/instructors" class="btn btn-outline-dark">Back to Instructors</a>
@@ -59,18 +56,17 @@ import MainLayout from '../../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  /* Sharing same styles as Penny Shannon's profile */
   .profile-hero { border-bottom: 5px solid var(--color-red); padding-bottom: 0; }
   .profile-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: end; }
   .action-silhouette { border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: var(--shadow-lg); background: #1a1a1a; }
   .profile-info { padding-bottom: 4rem; }
-  .profile-info h1 { font-size: 3rem; margin: 1rem 0; line-height: 1.1; }
+  .profile-info h1 { font-size: 2.8rem; margin: 1rem 0; line-height: 1.1; }
   .profile-info h1 span { color: var(--color-red); }
   .profile-info .rank { font-size: 1.5rem; color: #888; margin-bottom: 2rem; }
   .credentials-row { display: flex; align-items: center; gap: 1.5rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; font-family: var(--font-heading); color: var(--color-red); }
   .dot { width: 6px; height: 6px; background: #444; border-radius: 50%; }
   .text-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 5rem; }
-  .bio-verbatim p { font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem; color: #333; }
+  .bio-verbatim p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #333; }
   .sidebar { position: sticky; top: 120px; height: fit-content; }
   .quick-facts { background: #f9f9f9; padding: 2rem; border-radius: 4px; margin-bottom: 2rem; border-left: 4px solid var(--color-red); }
   .quick-facts h4 { margin-bottom: 1.5rem; color: var(--color-black); }
@@ -78,5 +74,5 @@ import MainLayout from '../../layouts/MainLayout.astro';
   .quick-facts li { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid #eee; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
   .btn-outline-dark { border-color: var(--color-black); color: var(--color-black); width: 100%; text-align: center; }
   .btn-outline-dark:hover { background: var(--color-black); color: var(--color-white); }
-  @media (max-width: 992px) { .profile-grid, .text-layout { grid-template-columns: 1fr; gap: 3rem; } .profile-info { padding-bottom: 2rem; } .profile-info h1 { font-size: 2.5rem; } }
+  @media (max-width: 992px) { .profile-grid, .text-layout { grid-template-columns: 1fr; gap: 3rem; } .profile-info { padding-bottom: 2rem; } .profile-info h1 { font-size: 2.2rem; } }
 </style>
